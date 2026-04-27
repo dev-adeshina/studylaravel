@@ -395,6 +395,20 @@
 
 
        window.toggleChat = function () {
+
+        const now = new Date();
+        const timeString = now.toLocaleTimeString('en-US', { 
+          hour: 'numeric', 
+          minute: 'numeric', 
+          hour12: true 
+        });
+
+        const timeNowElement = document.getElementById('realTime');
+
+        if (timeNowElement) {
+          timeNowElement.textContent = timeString;
+        }
+
         const card = document.getElementById('whatsapp-card');
         const chatIcon = document.getElementById('chat-icon');
         const closeIcon = document.getElementById('close-icon');
