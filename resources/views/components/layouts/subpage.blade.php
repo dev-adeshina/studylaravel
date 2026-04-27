@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>StudyGuide Education Landing Page</title>
+  <title>{{ $title ?? 'StudyGlide Educational Consult' }}</title>
   <meta
     name="description"
     content="A modern study abroad landing page built with Tailwind CSS and Font Awesome." />
