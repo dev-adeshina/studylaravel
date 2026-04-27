@@ -26,7 +26,7 @@
 
       <div class="shell pt-3 sm:pt-4 lg:pt-6">
         <nav class="flex items-center justify-between gap-4">
-          <a href="#" class="flex shrink-0 items-center">
+          <a href="{{ route('home') }}" class="flex shrink-0 items-center">
             <img src="images/logo.svg" alt="StudyGuide logo" class="h-10 w-auto md:h-11" />
           </a>
 
@@ -41,7 +41,7 @@
 
           <div class="flex items-center gap-3">
 
-            <a class="hidden sm:inline-flex pixel-anchor group relative items-center h-11 px-4 overflow-hidden bg-[#E2C065] border border-white/20 rounded-lg no-underline transition-all duration-300">
+            <a href="#apply" class="hidden sm:inline-flex pixel-anchor group relative items-center h-11 px-4 overflow-hidden bg-[#E2C065] border border-white/20 rounded-lg no-underline transition-all duration-300">
               <div id="pixel-grid" class="pixel-grid absolute inset-0 grid pointer-events-none">
               </div>
               <span class="relative z-10 text-sm font-bold mr-10 text-[#16484B]">Get In Touch</span>
@@ -162,7 +162,7 @@
       <div class="grid gap-10 border-b border-white/10 pb-12 md:grid-cols-2 xl:grid-cols-[1fr_0.85fr_0.8fr_1.35fr]">
         <div>
           <div class="flex items-center gap-3">
-            <a href="#home" class="flex items-center gap-3">
+            <a href="{{ route('home') }}" class="flex items-center gap-3">
               <img src="images/Logo_footer.png" class="w-full" alt="StudyGuide logo" class="h-11 w-11" />
             </a>
           </div>

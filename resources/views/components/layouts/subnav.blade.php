@@ -2,7 +2,7 @@
     <div class="hero-pattern absolute inset-0 bg-grid-fade opacity-50 pointer-events-none"></div>
     <div class="shell pt-3 sm:pt-4 lg:pt-6">
         <nav class="flex items-center justify-between gap-4">
-            <a href="#" class="flex shrink-0 items-center">
+            <a href="{{ route('home') }}" class="flex shrink-0 items-center">
                 <img src="{{ asset('/images/logo.svg') }}" alt="StudyGuide logo" class="h-10 w-auto md:h-11" />
             </a>
 
@@ -17,7 +17,7 @@
 
             <div class="flex items-center gap-3">
 
-                <a class="hidden sm:inline-flex pixel-anchor group relative items-center h-11 px-4 overflow-hidden bg-[#E2C065] border border-white/20 rounded-lg no-underline transition-all duration-300">
+                <a href="#apply" class="hidden sm:inline-flex pixel-anchor group relative items-center h-11 px-4 overflow-hidden bg-[#E2C065] border border-white/20 rounded-lg no-underline transition-all duration-300">
                     <div id="pixel-grid" class="pixel-grid absolute inset-0 grid pointer-events-none">
                     </div>
                     <span class="relative z-10 text-sm font-bold mr-10">Get In Touch</span>

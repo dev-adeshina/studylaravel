@@ -28,7 +28,7 @@
       <div class="grid gap-10 border-b border-white/10 pb-12 md:grid-cols-2 xl:grid-cols-[1fr_0.85fr_0.8fr_1.35fr]">
         <div>
           <div class="flex items-center gap-3">
-            <a href="#home" class="flex items-center gap-3">
+            <a href="{{ route('home') }}" class="flex items-center gap-3">
               <img src="{{ asset('/images/Logo_footer.png') }}" class="w-full" alt="StudyGuide logo" class="h-11 w-11" />
             </a>
           </div>
