@@ -77,16 +77,48 @@ class SendMailService {
 
     public function verifySubscriberToken($token) {
         $result = DB::transaction(function() use($token) {
-                $tokenRecord = SubscriberToken::where('token', $token)->first();
+                // $tokenRecord = SubscriberToken::where('token', $token)->first();
 
-                if (!$tokenRecord) {
-                    throw new \Exception("Token record disappeared during processing.");
+                // if (!$tokenRecord) {
+                //     throw new \Exception("Token record disappeared during processing.");
+                // }
+                // $tokenRecord->update([
+                //     'expires_at' => now()
+                // ]);
+                // $tokenRecord->subscriber->update([
+                //     'confirmed_at' => now()
+                // ]);
+                // $email = $tokenRecord->subscriber->email;
+
+                // return [
+                //     "email" => $email
+                // ];
+
+                $tokenRecord = SubscriberToken::with('subscriber')->where('token', $token)->first();
+
+                if (!$tokenRecord || !$tokenRecord->subscriber) {
+                    throw new \Exception("Invalid token or subscriber not found.");
                 }
 
-                $email = $tokenRecord->subscriber->email;
+                // Logic: If already confirmed, you might want to stop here 
+                // to prevent sending multiple "Welcome" emails.
+                if ($tokenRecord->subscriber->confirmed_at !== null) {
+                    throw new \Exception("This email is already verified.");
+                }
+
+                // Update Token status
+                $tokenRecord->update([
+                    'expires_at' => now()
+                ]);
+
+                // Update Subscriber status
+                $tokenRecord->subscriber->update([
+                    'confirmed_at' => now(),
+                    'status' => 'active' // Optional: move from 'pending' to 'active'
+                ]);
 
                 return [
-                    "email" => $email
+                    "email" => $tokenRecord->subscriber->email
                 ];
         });
 
