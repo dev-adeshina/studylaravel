@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\SendMail;
 use App\Helper\MessageConstruct;
-
+use App\Models\SubscriberToken;
 
 class SendMailService {
 
@@ -75,6 +75,34 @@ class SendMailService {
         return $result['subscriber'];
     }
 
+    public function verifySubscriberToken($token) {
+        $result = DB::transaction(function() use($token) {
+                $tokenRecord = SubscriberToken::where('token', $token)->first();
+
+                if (!$tokenRecord) {
+                    throw new \Exception("Token record disappeared during processing.");
+                }
+
+                $email = $tokenRecord->subscriber->email;
+
+                return [
+                    "email" => $email
+                ];
+        });
+
+        // send the automated email for token here
+        $messageData = [
+            'greetings'    => 'Hello!',
+            'title'        => 'Subscription Confirmed',
+            'lead'         => 'Thank you for joining our community.',
+            'body'         => 'From now you will receieve exclusive deals and offers from the best and latest study route visa',
+        ];
+
+        $message = new MessageConstruct();
+        $composedContent = $message->messageContent($messageData);
+
+        Mail::to($result['email'])->send(new SendMail(['content' => $composedContent], 'Successfully Subscribed'));
+    }
 
     public function notifyAdmin(array $notification) {
         $notify = DB::transaction(function() use ($notification) {
@@ -95,10 +123,7 @@ class SendMailService {
         $composedContent = $message->messageContent($messageData);
 
         Mail::to(AdminInfo::ADMIN_EMAIL->value)->send(new SendMail(['content' => $composedContent], 'Please Verify Your Subscription'));
-
-        
-
-        
+ 
     }
 
     public function sendToAdmin(Applicant $applicant) {
@@ -152,7 +177,7 @@ class SendMailService {
     }
 
 
-   
+    
 
     
 }

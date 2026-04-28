@@ -3,9 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MailController;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+
 
 
 Route::view('/', 'welcome')->name('home');
@@ -25,3 +23,6 @@ Route::view('/services', 'services')->name('services');
 
 
 Route::view('/thank-you', 'thanks')->name('thanks');
+Route::view('/error', 'errors')->name('error');
+
+Route::get('/verify{token}', [MailController::class, 'verifySubscriber']);

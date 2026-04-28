@@ -6,6 +6,7 @@ use Exception;
 use Illuminate\Http\Request;
 use App\Services\SendMailService;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Validator;
 use App\Enums\SubscriberState;
 
 
@@ -95,5 +96,24 @@ class MailController extends Controller
             Log::error("Applicant Form Error: " . $e->getMessage());
             return back()->withInput()->with('error', 'We could not process your application at this time.');
         }
+    }
+
+
+    public function verifySubscriber($token) {
+       
+        try {
+             $data = Validator::make(['token' => $token], [
+                'token' => 'required|string|size:64|exists:subscriber_tokens,token',
+            ]);
+
+            $this->mailService->verifySubscriberToken($data['token']);
+            return redirect()->route('thanks')->with('subscribe', 'Thank you for subscribing');
+        } catch (\Illuminate\Validation\ValidationException $e) {
+            return view('error')->with('error', 'Invalid or expired verification token.');
+        }catch(Exception $e) {
+            Log::error("Subscriber Verification Error: " . $e->getMessage());
+            return view('error')->with('error', 'An unexpected error occurred.');
+        }
+
     }
 }
