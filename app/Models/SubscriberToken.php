@@ -17,6 +17,6 @@ class SubscriberToken extends Model
 
     public function subscriber(): BelongsTo
     {
-        return $this->belongsTo(Subscriber::class);
+        return $this->belongsTo(Subscriber::class, 'subscriber_id');
     }
 }

@@ -77,22 +77,6 @@ class SendMailService {
 
     public function verifySubscriberToken($token) {
         $result = DB::transaction(function() use($token) {
-                // $tokenRecord = SubscriberToken::where('token', $token)->first();
-
-                // if (!$tokenRecord) {
-                //     throw new \Exception("Token record disappeared during processing.");
-                // }
-                // $tokenRecord->update([
-                //     'expires_at' => now()
-                // ]);
-                // $tokenRecord->subscriber->update([
-                //     'confirmed_at' => now()
-                // ]);
-                // $email = $tokenRecord->subscriber->email;
-
-                // return [
-                //     "email" => $email
-                // ];
 
                 $tokenRecord = SubscriberToken::with('subscriber')->where('token', $token)->first();
 

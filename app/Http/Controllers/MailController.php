@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Services\SendMailService;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rule;
 use App\Enums\SubscriberState;
 
 
@@ -104,7 +105,14 @@ class MailController extends Controller
         try {
 
             $validator = Validator::make(['token' => $token], [
-                'token' => 'required|string|size:64|exists:subscriber_tokens,token',
+                'token' => [
+                    'required',
+                    'string',
+                    'size:64',
+                    Rule::exists('subscriber_tokens', 'token')->where(function ($query) {
+                        $query->whereNull('expires_at'); // Only valid if expires_at is still NULL
+                    }),
+                ],
             ]);
 
             $validatedData = $validator->validate();
