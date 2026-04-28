@@ -139,7 +139,7 @@ class SendMailService {
         $message = new MessageConstruct();
         $composedContent = $message->messageContent($messageData);
 
-        Mail::to(AdminInfo::ADMIN_EMAIL->value)->send(new SendMail(['content' => $composedContent], 'Please Verify Your Subscription'));
+        Mail::to(AdminInfo::ADMIN_EMAIL->value)->send(new SendMail(['content' => $composedContent], 'An enquiry email'));
  
     }
 
