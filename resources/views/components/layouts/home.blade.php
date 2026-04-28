@@ -54,10 +54,23 @@
             </a>
 
             <details class="relative md:hidden group">
-              <summary class="flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-lg border border-white/15 bg-white/10 text-white transition hover:bg-white/15">
-                <i class="fa-solid fa-bars group-open:hidden"></i>
-                <i class="fa-solid fa-xmark hidden group-open:block"></i>
-              </summary>
+
+                <!-- <summary class="flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-lg border border-white/15 bg-white/10 text-white transition hover:bg-white/15">
+                  <span class="group-[open]:hidden">
+                      <i class="fa-solid fa-bars"></i>
+                  </span>
+                  <span class="hidden group-[open]:block">
+                      <i class="fa-solid fa-xmark"></i>
+                  </span>  
+                </summary> -->
+
+                <summary class="relative flex h-11 w-11 items-center justify-center text-white">
+
+                  <i class="fa-solid fa-bars absolute transition-opacity duration-200 group-[open]:opacity-0"></i>
+
+                  <i class="fa-solid fa-xmark absolute opacity-0 transition-opacity duration-200 group-[open]:opacity-100"></i>
+
+                </summary>
 
               <div class="absolute right-0 top-full mt-4 z-50 w-[80vw] max-w-[300px] border border-white/10 bg-brand-900/98 p-6 shadow-2xl rounded-xl backdrop-blur-lg">
                 <div class="flex flex-col gap-5 text-sm font-bold text-white/80">
@@ -83,7 +96,7 @@
           <div
             class="mb-6 inline-flex items-center gap-2 rounded-full border border-accent-300/20 bg-accent-300/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-accent-200">
             <i class="fa-solid fa-star text-[10px]"></i>
-            Visa Processing | IELTS Prep | Admissions
+            Visa Processing | Interview Prep | Admissions
           </div>
           <div class="w-full lg:w-4/4">
             <h1 class="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight tracking-[-0.02em] text-white md:leading-[1.1] lg:leading-[1.15]">
