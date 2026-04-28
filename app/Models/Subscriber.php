@@ -13,7 +13,8 @@ class Subscriber extends Model
         'email', 
         'status',
         'signup_source',
-        'ip_address'
+        'ip_address',
+        'confirmed_at'
     ];
 
 

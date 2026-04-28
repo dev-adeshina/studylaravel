@@ -11,7 +11,8 @@ class SubscriberToken extends Model
     use HasFactory;
     protected $fillable = [
         'subscriber_id',
-        'token'
+        'token',
+        'expires_at'
     ];
 
 

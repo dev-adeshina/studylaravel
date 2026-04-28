@@ -17,7 +17,7 @@ return new class extends Migration
             $table->enum('status', ['pending', 'active', 'unsubscribed'])->default('pending');
             $table->string('signup_source');
             $table->string('ip_address');
-            $table->timestamp('confrimed_at')->nullable();
+            $table->timestamp('confirmed_at')->nullable();
             $table->timestamps();
         });
     }
