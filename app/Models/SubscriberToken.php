@@ -15,7 +15,6 @@ class SubscriberToken extends Model
         'expires_at'
     ];
 
-
     public function subscriber(): BelongsTo
     {
         return $this->belongsTo(Subscriber::class, 'subscriber_id');
