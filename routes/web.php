@@ -25,4 +25,4 @@ Route::view('/services', 'services')->name('services');
 Route::view('/thank-you', 'thanks')->name('thanks');
 Route::view('/error', 'errors')->name('error');
 
-Route::get('/verify{token}', [MailController::class, 'verifySubscriber']);
+Route::get('/verify/{token}', [MailController::class, 'verifySubscriber']);
