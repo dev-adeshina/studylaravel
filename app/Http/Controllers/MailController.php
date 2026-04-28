@@ -101,19 +101,44 @@ class MailController extends Controller
 
     public function verifySubscriber($token) {
        
+        // try {
+        //      $data = Validator::make(['token' => $token], [
+        //         'token' => 'required|string|size:64|exists:subscriber_tokens,token',
+        //     ]);
+
+        //     $this->mailService->verifySubscriberToken($data['token']);
+        //     return redirect()->route('thanks')->with('subscribe', 'Thank you for subscribing');
+        // } catch (\Illuminate\Validation\ValidationException $e) {
+        //     return view('error')->with('error', 'Invalid or expired verification token.');
+        // }catch(Exception $e) {
+        //     Log::error("Subscriber Verification Error: " . $e->getMessage());
+        //     return view('error')->with('error', 'An unexpected error occurred.');
+        // }
+
+
         try {
-             $data = Validator::make(['token' => $token], [
+            // 1. Create the validator instance
+            $validator = Validator::make(['token' => $token], [
                 'token' => 'required|string|size:64|exists:subscriber_tokens,token',
             ]);
 
-            $this->mailService->verifySubscriberToken($data['token']);
-            return redirect()->route('thanks')->with('subscribe', 'Thank you for subscribing');
-        } catch (\Illuminate\Validation\ValidationException $e) {
-            return view('error')->with('error', 'Invalid or expired verification token.');
-        }catch(Exception $e) {
-            Log::error("Subscriber Verification Error: " . $e->getMessage());
-            return view('error')->with('error', 'An unexpected error occurred.');
-        }
+            // 2. Call ->validate(). 
+            // This does two things: 
+            // - Throws an exception if it fails (triggering your catch block)
+            // - Returns the validated data as an ARRAY if it succeeds
+            $validatedData = $validator->validate();
 
+            // 3. Now you can use it as an array!
+            $this->mailService->verifySubscriberToken($validatedData['token']);
+            
+            return redirect()->route('thanks')->with('subscribe', 'Thank you for subscribing');
+
+        } catch (\Illuminate\Validation\ValidationException $e) {
+            // This catches the 'exists' check failing or 'size' being wrong
+            return view('error')->with('error', 'Invalid or expired verification token.');
+        } catch (\Exception $e) {
+            Log::error("Subscriber Verification Error: " . $e->getMessage());
+            return view('error')->with('error', 'Something went wrong on our end.');
+        }
     }
 }
