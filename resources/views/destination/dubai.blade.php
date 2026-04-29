@@ -13,7 +13,7 @@
                         combines academic excellence with a vibrant, 
                         multicultural lifestyle and strong industry connections.
                     </p>
-                    <a href="{{ route('destination') }}" class="pixel-anchor group relative inline-flex items-center h-11 justify-between min-w-[180px] px-2 overflow-hidden bg-transparent border border-[#16484B]/50 rounded-lg no-underline transition-all duration-300 hover:border-[#E2C065]/40">
+                    <a href="{{ route('applicants') }}" class="pixel-anchor group relative inline-flex items-center h-11 justify-between min-w-[180px] px-2 overflow-hidden bg-transparent border border-[#16484B]/50 rounded-lg no-underline transition-all duration-300 hover:border-[#E2C065]/40">
 
                         <div class="pixel-grid absolute inset-0 grid pointer-events-none">
                         </div>

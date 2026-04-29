@@ -20,7 +20,7 @@ Route::view('/blog', 'blog')->name('blog');
 Route::view('/blog/post', 'post')->name('post');
 
 Route::view('/services', 'services')->name('services');
-
+Route::view('/applicants', 'application', ['destination' => 'Application Segment'])->name('applicants');
 
 Route::view('/thank-you', 'thanks')->name('thanks');
 Route::view('/error', 'errors')->name('error');

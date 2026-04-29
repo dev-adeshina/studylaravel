@@ -1,4 +1,4 @@
-<header class="relative z-50">
+<header class="relative z-50 isolate overflow-hidden bg-brand-800 text-white py-8">
     <div class="hero-pattern absolute inset-0 bg-grid-fade opacity-50 pointer-events-none"></div>
     <div class="shell pt-3 sm:pt-4 lg:pt-6">
         <nav class="flex items-center justify-between gap-4">

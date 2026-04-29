@@ -20,7 +20,7 @@
                         </div>
 
                         <span class="relative z-10 anchor-text transition-colors duration-500 group-hover:text-[#E2C065]">
-                        View All Destinations
+                        Apply Now
                         </span>
 
                         <div class="relative z-10 flex items-center justify-center w-8 h-8 ml-4 bg-[#16484b] rounded-[5px] transition-all duration-500 group-hover:bg-[#E2C065] hover:-translate-y-1 hover:scale-110">
