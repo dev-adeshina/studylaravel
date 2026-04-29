@@ -18,7 +18,7 @@ Route::view('/faq', 'faq')->name('faq');
 Route::view('/contact', 'contact')->name('contact');
 Route::view('/blog', 'blog')->name('blog');
 Route::view('/blog/post', 'post')->name('post');
-Route::view('/destination/travels', 'travels')->name('travels');
+
 Route::view('/services', 'services')->name('services');
 
 
@@ -26,3 +26,14 @@ Route::view('/thank-you', 'thanks')->name('thanks');
 Route::view('/error', 'errors')->name('error');
 
 Route::get('/verify/{token}', [MailController::class, 'verifySubscriber']);
+
+Route::view('/destination/new_zeeland', 'destination.new_zeeland', ['destination' =>  ucfirst('New Zeeland')])->name('travels.new_zeeland');
+Route::view('/destination/canada', 'destination.canada', ['destination' =>  ucfirst('canada')])->name('travels.canada');
+Route::view('/destination/uk', 'destination.uk', ['destination' =>  ucfirst('uk')])->name('travels.uk');
+Route::view('/destination/ireland', 'destination.ireland', ['destination' =>  ucfirst('ireland')])->name('travels.ireland');
+Route::view('/destination/australia', 'destination.australia', ['destination' =>  ucfirst('australia')])->name('travels.australia');
+Route::view('/destination/usa', 'destination.usa', ['destination' =>  ucfirst('United State od America')])->name('travels.usa');
+Route::view('/destination/europe', 'destination.europe', ['destination' =>  ucfirst('europe')])->name('travels.europe');
+Route::view('/destination/dubai', 'destination.dubai', ['destination' =>  ucfirst('dubai')])->name('travels.dubai');
+
+
