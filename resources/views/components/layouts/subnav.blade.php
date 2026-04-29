@@ -30,9 +30,9 @@
                 </a>
 
                 <details class="relative md:hidden group">
-                    <summary class="flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-lg border border-white/15 bg-white/10 text-white transition hover:bg-white/15">
-                        <i class="fa-solid fa-bars group-open:hidden"></i>
-                        <i class="fa-solid fa-xmark hidden group-open:block"></i>
+                    <summary class="relative flex h-11 w-11 items-center justify-center text-white">
+                        <i class="fa-solid fa-bars absolute transition-opacity duration-200 group-[open]:opacity-0"></i>
+                        <i class="fa-solid fa-xmark absolute opacity-0 transition-opacity duration-200 group-[open]:opacity-100"></i>
                     </summary>
 
                     <div class="absolute right-0 top-full mt-4 z-50 w-[80vw] max-w-[300px]  border border-white/10 bg-brand-900/98 p-6 shadow-2xl rounded-xl backdrop-blur-lg">
