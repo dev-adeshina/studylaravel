@@ -42,7 +42,7 @@
  
 
                 <h2 class="font-inter font-semibold text-[24px] leading-[32px] mb-[24px] text-[#181D27] tracking-[0%]">List of Schools in Canada</h2>
-                <article>
+                <article class="pl-3">
                     <ul class="list-disc list-outside ml-6 space-y-2">
                         <li class="font-inter font-normal text-[#535862] text-[16px] lg:text-[18px] leading-[24px] lg:leading-[28px] mb-[16px] lg:mb-[18px]">University of Canada West</li>
                         <li class="font-inter font-normal text-[#535862] text-[16px] lg:text-[18px] leading-[24px] lg:leading-[28px] mb-[16px] lg:mb-[18px]">Farleigh Dickinson University</li>
