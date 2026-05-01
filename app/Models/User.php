@@ -37,6 +37,6 @@ class User extends Authenticatable implements FilamentUser
         // This logic determines who can log in in production.
         // For now, return true to see if it fixes the 403.
         // Later, you should restrict this (e.g., check for a specific email).
-        return str_ends_with($this->email, '@studyglidedu.com');
+        return str_ends_with($this->email, 'isrealodedeyi@gmail.com');
     }
 }
