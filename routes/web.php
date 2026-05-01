@@ -40,9 +40,9 @@ Route::view('/destination/dubai', 'destination.dubai', ['destination' =>  ucfirs
 
 Route::get('/create-admin', function () {
     User::create([
-        'name' => 'Admin Test',
-        'email' => 'test@studyglidedu.com',
-        'password' => Hash::make('password123'),
+        'name' => 'Isreal Odedeyi',
+        'email' => 'isrealodedeyi@gmail.com',
+        'password' => Hash::make('Maestro123@'),
     ]);
     return "User created successfully!";
 });
