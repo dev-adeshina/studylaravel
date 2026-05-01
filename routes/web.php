@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MailController;
-
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 
 
@@ -37,4 +38,11 @@ Route::view('/destination/europe', 'destination.europe', ['destination' =>  ucfi
 Route::view('/destination/dubai', 'destination.dubai', ['destination' =>  ucfirst('dubai')])->name('travels.dubai');
 
 
-Route::view('/templates', 'templates.study-glide-page');
+Route::get('/create-admin', function () {
+    User::create([
+        'name' => 'Admin Test',
+        'email' => 'test@studyglidedu.com',
+        'password' => Hash::make('password123'),
+    ]);
+    return "User created successfully!";
+});
