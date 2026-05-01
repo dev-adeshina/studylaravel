@@ -1,0 +1,1 @@
+<img src="{{ $footerLogo ?? 'nothing'}}" class="w-full" alt="StudyGuide logo" class="h-11 w-11" />

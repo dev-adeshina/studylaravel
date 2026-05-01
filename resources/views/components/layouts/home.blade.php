@@ -27,7 +27,7 @@
       <div class="shell pt-3 sm:pt-4 lg:pt-6">
         <nav class="flex items-center justify-between gap-4">
           <a href="{{ route('home') }}" class="flex shrink-0 items-center">
-            <img src="images/logo.svg" alt="StudyGuide logo" class="h-10 w-auto md:h-11" />
+            <x-main-logo/>
           </a>
 
           <div class="hidden md:flex items-center gap-4 lg:gap-6 xl:gap-8">
@@ -163,7 +163,7 @@
         <div>
           <div class="flex items-center gap-3">
             <a href="{{ route('home') }}" class="flex items-center gap-3">
-              <img src="images/Logo_footer.png" class="w-full" alt="StudyGuide logo" class="h-11 w-11" />
+              <x-footer-logo />
             </a>
           </div>
           <p class="mt-6 max-w-sm footer-cta ">
@@ -175,35 +175,12 @@
 
         <div>
           <h3 class="font-display text-lg">Contact</h3>
-          <div class="mt-5 space-y-3 text-sm text-white/70">
-            <p class="contact-text">
-              <span class="font-semibold contact-title">Office Address</span>
-              <br />
-              Shop 1MS FAAN complex beside FAAN staff quarters, Ikeja along Lagos State
-            </p>
-            <p class="contact-text">
-              <span class="font-semibold contact-title">Phone</span>
-              <br />
-              +234 913 307 1334
-            </p>
-            <p class="contact-text">
-              <span class="font-semibold contact-title">Email</span>
-              <br />
-              Info@studyglideedu.com
-            </p>
-          </div>
+          <x-footer-contact />
         </div>
 
         <div>
           <h3 class="font-display text-lg">Quick Links</h3>
-          <div class="mt-5 space-y-3">
-            <a href="{{ route('about') }}" class="quick-link-text">About us</a>
-            <a href="{{ route('contact') }}" class="quick-link-text block">Contact Us</a>
-            <a href="{{ route('faq') }}" class="quick-link-text block">FAQ</a>
-            <a href="{{ route('blog') }}" class="quick-link-text block">Blog</a>
-            <a href="{{ route('blog') }}" class="quick-link-text block">Blog Post</a>
-            <a href="{{ route('services') }}" class="quick-link-text block">Scholarship</a>
-          </div>
+          <x-quick-link/>
         </div>
 
         <div>
