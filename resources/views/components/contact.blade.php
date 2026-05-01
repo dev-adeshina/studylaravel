@@ -1,28 +1,29 @@
+<x-swal />
 <form class="space-y-6 py-4" action="{{ route('contact.notify')}}" method="POST">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="flex flex-col gap-2">
             <label class="contact-form-label">First name *</label>
-            <input type="text" name="first_name" placeholder="First name" class="contact-form-placeholder border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#1a4342] outline-none transition-all">
+            <input type="text" name="first_name" placeholder="First name" class="contact-form-placeholder border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#1a4342] outline-none transition-all" required>
         </div>
         <div class="flex flex-col gap-2">
             <label class="contact-form-label">Last name *</label>
-            <input type="text" name="last_name" placeholder="Last name" class="contact-form-placeholder border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#1a4342] outline-none transition-all">
+            <input type="text" name="last_name" placeholder="Last name" class="contact-form-placeholder border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#1a4342] outline-none transition-all" required>
         </div>
     </div>
 
     <div class="flex flex-col gap-2">
         <label class="contact-form-label">Email *</label>
-        <input type="email" name="email" placeholder="you@company.com" class="contact-form-placeholder border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#1a4342] outline-none">
+        <input type="email" name="email" placeholder="you@company.com" class="contact-form-placeholder border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#1a4342] outline-none" required>
     </div>
 
     <div class="flex flex-col gap-2">
         <label class="contact-form-label">Phone Number</label>
-        <input type="tel" name="phone_number" placeholder="+234 9133071334" class="contact-form-placeholder border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#1a4342] outline-none">
+        <input type="tel" name="phone_number" placeholder="+234 9133071334" class="contact-form-placeholder border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#1a4342] outline-none" required>
     </div>
 
     <div class="flex flex-col gap-2">
         <label class="contact-form-label">Message *</label>
-        <textarea rows="5" name="message" placeholder="Leave us a message..." class="contact-form-placeholder border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#1a4342] outline-none resize-none"></textarea>
+        <textarea rows="5" name="message" placeholder="Leave us a message..." class="contact-form-placeholder border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#1a4342] outline-none resize-none" required></textarea>
     </div>
 
     <button type="submit" class="w-full secondary-pixel-anchor group relative inline-flex items-center h-11 justify-between  px-1 overflow-hidden bg-[#16484B] border border-white/20 rounded-[5px] no-underline transition-all duration-300 hover:border-white/40">

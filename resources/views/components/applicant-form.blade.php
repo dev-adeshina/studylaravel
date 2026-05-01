@@ -1,23 +1,24 @@
+<x-swal />
 <form class="mt-8 grid gap-4 sm:gap-6 sm:grid-cols-2 px-4 sm:px-6 lg:px-8" action="{{ route('apply.submit') }}" method="POST">
   @csrf
   <div class="sm:col-span-2">
     <label for="full-name" class="mb-2 block text-sm font-semibold text-slate-800">Full Name*</label>
-    <input id="full-name" name="full_name" type="text" class="form-field" placeholder="Your full name" />
+    <input id="full-name" name="full_name" type="text" class="form-field" placeholder="Your full name" required />
   </div>
 
   <div>
     <label for="age" class="mb-2 block text-sm font-semibold text-slate-800">Age*</label>
-    <input id="age" name="age" type="number" class="form-field" placeholder="19" />
+    <input id="age" name="age" type="number" class="form-field" placeholder="19" required />
   </div>
 
   <div>
     <label for="phone" class="mb-2 block text-sm font-semibold text-slate-800">Phone Number*</label>
-    <input id="phone" name="phone_number" type="tel" class="form-field" placeholder="+234 800 000 0000" />
+    <input id="phone" name="phone_number" type="tel" class="form-field" placeholder="+234 800 000 0000" required />
   </div>
 
   <div>
     <label for="eamil" class="mb-2 block text-sm font-semibold text-slate-800">Email*</label>
-    <input id="email" name="email" type="text" class="form-field" placeholder="Email" />
+    <input id="email" name="email" type="text" class="form-field" placeholder="Email" required />
   </div>
 
   <div>
@@ -32,7 +33,7 @@
 
   <div>
     <label for="destination" class="mb-2 block text-sm font-semibold text-slate-800">Preffered study destination*</label>
-    <select id="destination" name="preferred_study_destination" class="form-field">
+    <select id="destination" name="preferred_study_destination" class="form-field" required>
       <option>UK</option>
       <option>Canada</option>
       <option>Ireland</option>
@@ -43,12 +44,12 @@
 
   <div>
     <label for="interview" class="mb-2 block text-sm font-semibold text-slate-800">Other countr(ies) interested in*</label>
-    <input id="interview" name="other_countries_interested" type="text" class="form-field" placeholder="Optional" />
+    <input id="interview" name="other_countries_interested" type="text" class="form-field" placeholder="Optional" required />
   </div>
 
   <div>
     <label for="level" class="mb-2 block text-sm font-semibold text-slate-800">Program interested in? *</label>
-    <select id="level" name="program_interested" class="form-field">
+    <select id="level" name="program_interested" class="form-field" required>
       <option>A Levels</option>
       <option>Foundation</option>
       <option>Undergraduate</option>
@@ -58,7 +59,7 @@
 
   <div>
     <label for="year" class="mb-2 block text-sm font-semibold text-slate-800">Other programme interested in?*
-      <select id="year" name="intake_period" class="form-field">
+      <select id="year" name="intake_period" class="form-field" required>
         <option>2026 intake</option>
         <option>2027 intake</option>
         <option>Not sure yet</option>
@@ -67,7 +68,7 @@
 
   <div>
     <label for="qualification" class="mb-2 block text-sm font-semibold text-slate-800">Highest qualification?*</label>
-    <select id="qualification" name="highest_qualification" class="form-field">
+    <select id="qualification" name="highest_qualification" class="form-field" required>
       <option>SSCE</option>
       <option>OND</option>
       <option>HND</option>
@@ -77,12 +78,12 @@
 
   <div>
     <label for="question" class="mb-2 block text-sm font-semibold text-slate-800">Other qualification *</label>
-    <input id="question" name="other_qualification" type="text" class="form-field" placeholder="Optional" />
+    <input id="question" name="other_qualification" type="text" class="form-field" placeholder="Optional" required />
   </div>
 
   <div>
     <label for="visa-refusal" class="mb-2 block text-sm font-semibold text-slate-800">Any previous visa refusal?*</label>
-    <select id="visa-refusal" name="previous_visa_refusal" class="form-field">
+    <select id="visa-refusal" name="previous_visa_refusal" class="form-field" required>
       <option>No</option>
       <option>Yes</option>
     </select>
@@ -90,7 +91,7 @@
 
   <div>
     <label for="how-heard" class="mb-2 block text-sm font-semibold text-slate-800">How did you hear about us?*</label>
-    <select id="how-heard" name="referral_source" class="form-field">
+    <select id="how-heard" name="referral_source" class="form-field" required>
       <option>A friend</option>
       <option>Instagram</option>
       <option>Referral partner</option>

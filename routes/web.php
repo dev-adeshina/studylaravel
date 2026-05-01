@@ -37,3 +37,4 @@ Route::view('/destination/europe', 'destination.europe', ['destination' =>  ucfi
 Route::view('/destination/dubai', 'destination.dubai', ['destination' =>  ucfirst('dubai')])->name('travels.dubai');
 
 
+Route::view('/templates', 'templates.study-glide-page');

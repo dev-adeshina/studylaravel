@@ -1,10 +1,6 @@
 <form class="mt-5 flex flex-col gap-3 sm:flex-row sm:items-stretch" action="{{ route('subscribe') }}" method="POST">
     @csrf
     <input type="email" name="email" class="footer-subscribe-input form-field min-w-0 flex-1 border-white/15 bg-white text-slate-900 sm:min-w-[260px]" placeholder="Enter your email" required />
-
-    @error('email')
-        <span class="text-red-500">{{ $message }}</span>
-    @enderror
     
     <button type="submit"  class="pixel-anchor group relative inline-flex items-center h-11 justify-between  px-1 overflow-hidden bg-[#E2C065] border border-white/20 rounded-[5px] no-underline transition-all duration-300 hover:border-white/40">
 
@@ -34,10 +30,3 @@
     </button>
 </form>
 
-@if (session('success'))
-    <div class="alert alert-success">{{ session('success') }}</div>
-@endif
-
-@if (session('error'))
-    <div class="alert alert-danger">{{ session('error') }}</div>
-@endif

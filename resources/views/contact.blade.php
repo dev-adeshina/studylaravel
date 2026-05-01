@@ -5,12 +5,10 @@
 
             <div class="max-w-2xl w-full lg:px-8">
                 <h1 class="contact-form-title">Contact Us</h1>
-                <p class="contact-form-paragraph py-2">
+                <p class="font-inter font-semibold lg:text-[24px] lg:mb-[16px] contact-form-paragraph py-2">
                     You can reach us anytime via
-                    <br />
-                    <a href="mailto:info@studyglideedu.com" class="contact-form-email">info@studyglideedu.com</a>
                 </p>
-
+                <small><a href="mailto:info@studyglideedu.com" class="contact-form-email">info@studyglidedu.com</a></small>
                 <x-contact />
             </div>
 
