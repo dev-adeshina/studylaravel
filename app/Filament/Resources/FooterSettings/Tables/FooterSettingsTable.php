@@ -20,8 +20,8 @@ class FooterSettingsTable
                     ->searchable(),
                 TextColumn::make('designer_name')
                     ->searchable(),
-                TextColumn::make('designer_url')
-                    ->searchable(),
+                // TextColumn::make('designer_url')
+                //     ->searchable(),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
