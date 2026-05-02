@@ -1,0 +1,1 @@
+<p>Design by <a href="{{ $url ?? '' }}" class="underline underline-offset-4">{{ $name ?? ''}}</a></p>

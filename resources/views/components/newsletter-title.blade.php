@@ -1,0 +1,1 @@
+<h3 class="font-display text-lg">{{ $title ?? ''}}</h3>

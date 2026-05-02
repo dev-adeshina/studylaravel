@@ -166,11 +166,7 @@
               <x-footer-logo />
             </a>
           </div>
-          <p class="mt-6 max-w-sm footer-cta ">
-            Nigeria's most trusted education
-            consultancy, bridging the gap between
-            local talent and global opportunities.
-          </p>
+          <x-footer-slogan/>
         </div>
 
         <div>
@@ -184,27 +180,23 @@
         </div>
 
         <div>
-          <h3 class="font-display text-lg">Stay up to date</h3>
-          <p class="mt-5 max-w-[48ch] contact-text">
-            Study abroad news and opportunities, first access to new intakes, and
-            practical planning tips delivered monthly.
-          </p>
+          
+          <x-newsletter-title />
+          <x-newsletter-discription />
           <x-footer-signup />
 
         </div>
       </div>
 
       <div class="flex flex-col gap-4 pt-6 text-sm text-white/55 md:flex-row md:items-center md:justify-between contact-text">
-        <p>&copy; <script>
-            document.write(new Date().getFullYear())
-          </script> StudyGlide. All rights reserved.</p>
+        <x-copyright />
         <div class="flex items-center gap-5 text-base">
           <a href="https://twitter.com/studyglide_edu" aria-label="X" class="transition hover:text-accent-200"><i class="fa-brands fa-x-twitter"></i></a>
           <a href="https://www.tiktok.com/@studyglide_edu?_r=1&_t=ZS-95OCqk0Sirk" aria-label="TikTok" class="transition hover:text-accent-200"><i class="fa-brands fa-tiktok"></i></a>
           <a href="https://www.instagram.com/studyglide_edu?utm_source=qr&igsh=enFiZXQ4azl1eXg4" aria-label="Instagram" class="transition hover:text-accent-200"><i class="fa-brands fa-instagram"></i></a>
           <a href="https://www.facebook.com/share/18DvbTwACB/" aria-label="Facebook" class="transition hover:text-accent-200"><i class="fa-brands fa-facebook-f"></i></a>
         </div>
-        <p>Design by <span class="underline underline-offset-4">JayintopStudio</span></p>
+        <x-designer-name />
       </div>
     </div>
   </footer>
