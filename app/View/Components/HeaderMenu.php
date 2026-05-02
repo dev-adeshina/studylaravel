@@ -6,10 +6,12 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 use App\Models\HeaderLink;
+use App\Models\HeaderSetting;
 
 class HeaderMenu extends Component
 {
     public object $navLink;
+    public object $headerSettings;
     /**
      * Create a new component instance.
      */
@@ -18,6 +20,7 @@ class HeaderMenu extends Component
         //
 
         $this->navLink = HeaderLink::all() ?? null;
+        $this->headerSettings = HeaderSetting::first() ?? null;
     }
 
     /**

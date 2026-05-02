@@ -1,3 +1,11 @@
+@php
+    // Check if we are currently on the home page
+    $isHome = Request::routeIs('home') || Request::is('/');
+    
+    // Determine the href based on the page
+    $href = $isHome ? $headerSettings->cta_to_area : $headerSettings->cta_url;
+@endphp
+
 <header class="relative z-999999999">
       <div class="hero-pattern absolute inset-0 bg-grid-fade opacity-50 pointer-events-none"></div>
 
@@ -17,10 +25,10 @@
 
           <div class="flex items-center gap-3">
 
-            <a href="#apply" class="hidden sm:inline-flex pixel-anchor group relative items-center h-11 px-4 overflow-hidden bg-[#E2C065] border border-white/20 rounded-lg no-underline transition-all duration-300">
+            <a href="{{ $href  }}" class="hidden sm:inline-flex pixel-anchor group relative items-center h-11 px-4 overflow-hidden bg-[#E2C065] border border-white/20 rounded-lg no-underline transition-all duration-300">
               <div id="pixel-grid" class="pixel-grid absolute inset-0 grid pointer-events-none">
               </div>
-              <span class="relative z-10 text-sm font-bold mr-10 text-[#16484B]">Get In Touch</span>
+              <span class="relative z-10 text-sm font-bold mr-10 text-[#16484B]">{{ $headerSettings->cta }}</span>
               <div class="relative z-10 flex items-center justify-center w-7 h-7 ml-3 bg-[#16484b] rounded-md group-hover:bg-[#E2C065]">
                 <svg class="w-4 h-4 text-[#E2C065] group-hover:text-[#16484b]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
                   <line x1="7" y1="17" x2="17" y2="7"></line>
@@ -44,7 +52,7 @@
                         @endforeach
                     @endif
                   <hr class="border-white/10">
-                  <a href="#apply" class="w-full bg-[#E2C065] py-3 text-center text-brand-900 text-[#16484B] rounded-lg">Get In Touch</a>
+                  <a href="{{ $href  }}" class="w-full bg-[#E2C065] py-3 text-center text-brand-900 text-[#16484B] rounded-lg">{{ $headerSettings->cta }}</a>
                 </div>
               </div>
             </details>
