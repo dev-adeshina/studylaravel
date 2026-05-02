@@ -23,6 +23,8 @@ class QuickLinkResource extends Resource
 
     protected static ?string $recordTitleAttribute = 'quick_links';
 
+    protected static string|\UnitEnum|null $navigationGroup = 'Editor: Footer Management';
+
     public static function form(Schema $schema): Schema
     {
         // return QuickLinkForm::configure($schema);

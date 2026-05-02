@@ -21,6 +21,8 @@ class SocialLinkResource extends Resource
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
     protected static ?string $recordTitleAttribute = 'social_links';
+    
+    protected static string|\UnitEnum|null $navigationGroup = 'Editor: Footer Management';
 
     public static function form(Schema $schema): Schema
     {

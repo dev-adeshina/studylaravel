@@ -22,6 +22,8 @@ class FooterContactResource extends Resource
 
     protected static ?string $recordTitleAttribute = 'footer_contacts';
 
+    protected static string|\UnitEnum|null $navigationGroup = 'Editor: Footer Management';
+
     public static function form(Schema $schema): Schema
     {
         return FooterContactForm::configure($schema);

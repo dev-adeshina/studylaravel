@@ -22,6 +22,8 @@ class FooterSettingResource extends Resource
 
     protected static ?string $recordTitleAttribute = 'footer_settings';
 
+    protected static string|\UnitEnum|null $navigationGroup = 'Editor: Footer Management';
+
     public static function form(Schema $schema): Schema
     {
         return FooterSettingForm::configure($schema);

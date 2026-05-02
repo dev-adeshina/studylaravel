@@ -22,6 +22,8 @@ class LogoResource extends Resource
 
     protected static ?string $recordTitleAttribute = 'logos';
 
+    protected static string|\UnitEnum|null $navigationGroup = 'Editor: Logo Management';
+
     public static function form(Schema $schema): Schema
     {
         return LogoForm::configure($schema);
