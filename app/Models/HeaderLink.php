@@ -1,0 +1,14 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class HeaderLink extends Model
+{
+    //
+    protected $fillable = [
+        'label',
+        'url'
+    ];
+}

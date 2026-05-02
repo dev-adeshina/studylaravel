@@ -1,6 +1,7 @@
 <x-layouts.subpage>
+    <x-subbanner.faq />
     <main>
-        <x-subbanner.faq />
+        
         <div id="mission-statement" class="shell py-16">
 
 

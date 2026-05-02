@@ -1,1 +1,1 @@
-<img src="{{ $footerLogo ?? 'nothing'}}" class="w-full" alt="StudyGuide logo" class="h-11 w-11" />
+<img src="{{ asset($footerLogo ?? 'images/Logo_footer.png')}}" class="w-full" alt="StudyGuide logo" class="h-11 w-11" />

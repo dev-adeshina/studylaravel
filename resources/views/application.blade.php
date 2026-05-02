@@ -1,5 +1,5 @@
 <x-layouts.subpage>
-      <x-layouts.subnav />
+        <x-subbanner.applicant />
     <main>
        
         <article class="shell py-16 md:py-24">

@@ -1,6 +1,7 @@
 <x-layouts.subpage>
+    <x-subbanner.blog />
     <main>
-        <x-subbanner.blog />
+        
         <div class="shell">
 
             <div class="lg:hidden mt-12 w-full">
