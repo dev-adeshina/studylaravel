@@ -1,6 +1,6 @@
 @props(['destination'])
 <section class="relative isolate overflow-hidden bg-brand-800 text-white">
-    <x-layouts.subnav/>
+    <x-header-menu/>
 
     <div class="shell pb-20 sm:pb-24 md:pb-28 pt-12 sm:pt-16 md:pt-20">
         <div class="grid grid-cols-1 items-center gap-12 lg:py-16 lg:px-40">
