@@ -190,12 +190,7 @@
 
       <div class="flex flex-col gap-4 pt-6 text-sm text-white/55 md:flex-row md:items-center md:justify-between contact-text">
         <x-copyright />
-        <div class="flex items-center gap-5 text-base">
-          <a href="https://twitter.com/studyglide_edu" aria-label="X" class="transition hover:text-accent-200"><i class="fa-brands fa-x-twitter"></i></a>
-          <a href="https://www.tiktok.com/@studyglide_edu?_r=1&_t=ZS-95OCqk0Sirk" aria-label="TikTok" class="transition hover:text-accent-200"><i class="fa-brands fa-tiktok"></i></a>
-          <a href="https://www.instagram.com/studyglide_edu?utm_source=qr&igsh=enFiZXQ4azl1eXg4" aria-label="Instagram" class="transition hover:text-accent-200"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://www.facebook.com/share/18DvbTwACB/" aria-label="Facebook" class="transition hover:text-accent-200"><i class="fa-brands fa-facebook-f"></i></a>
-        </div>
+        <x-social-links />
         <x-designer-name />
       </div>
     </div>
