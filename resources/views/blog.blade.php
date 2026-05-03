@@ -1,5 +1,5 @@
 <x-layouts.subpage>
-    <x-subbanner.blog />
+    <x-hero-blog />
     <main>
         
         <div class="shell">

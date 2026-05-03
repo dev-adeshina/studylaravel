@@ -1,5 +1,5 @@
 <x-layouts.subpage>
-  <x-subbanner.destination />
+  <x-hero-destination />
   <main>
     
     <div class="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8 gap-y-8 py-16 p-2 lg:px-24">

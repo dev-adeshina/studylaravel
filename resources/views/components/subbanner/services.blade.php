@@ -5,20 +5,21 @@
             <div class="w-full">
                 <div
                     class="hero-breadcrumb">
-                    Services
+                    <!-- Services -->
+                    {{ $hero->breadcrumb ?? 'Servicesss'}}
                 </div>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-12">
                 <div class="order-1 col-span-7">
                     <h1 class="hero-title">
-                        Guilding Your Path to Global Education
+                        {{ $hero->title ?? 'Guilding Your Path to Global Education' }}
                     </h1>
 
                 </div>
                 <div class="order-2 col-span-5">
 
                     <p class="hero-paragraph">
-                        At StudyGlide Educational Consult, we are committed to helping students worldwide achieve their dreams of studying abroad through professional, transparent, and result-oriented services.
+                        {{ $hero->description ?? 'At StudyGlide Educational Consult, we are committed to helping students worldwide achieve their dreams of studying abroad through professional, transparent, and result-oriented services.' }}
                     </p>
                 </div>
             </div>

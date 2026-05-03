@@ -1,25 +1,23 @@
 <section class="relative isolate overflow-hidden bg-brand-800 text-white">
     <x-header-menu/>
+
     <div class="shell pb-20 sm:pb-24 md:pb-28 pt-12 sm:pt-16 md:pt-20">
         <div class="grid grid-cols-1 items-center gap-12 py-16">
             <div class="w-full">
-                <div
-                    class="hero-breadcrumb">
-                    {{ $hero->breadcrumb ?? 'About Uss'}}
-                    <!-- About Us -->
+                <div class="hero-breadcrumb">
+                    {{ $hero->breadcrumb ?? 'Contact Us' }}
                 </div>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-12">
-                <div class="order-1 col-span-7">
+                <div class="order-1 col-span-7 lg:pr-20">
                     <h1 class="hero-title">
-                        Guilding Your Path to Global Education
+                        {{ $hero->title ?? 'Where would you like to study?'}}
+                        
                     </h1>
-
                 </div>
-                <div class="order-2 col-span-5">
-
+                <div class="order-2 col-span-5 lg:pl-20">
                     <p class="hero-paragraph">
-                        StudyGlide is more than a consultancy; we are your strategic partner in navigating the complexities of international admissions.
+                        {{ $hero->description ?? 'Explore top study destinations with strong partnerships and proven success for international students' }}
                     </p>
                 </div>
             </div>

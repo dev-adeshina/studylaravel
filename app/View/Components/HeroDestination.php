@@ -5,22 +5,18 @@ namespace App\View\Components;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
-use App\Models\HeaderLink;
-use App\Models\HeaderSetting;
+use App\Models\Hero;
 
-class HeaderMenu extends Component
+class HeroDestination extends Component
 {
-    public object $navLink;
-    public object $headerSettings;
+    public object $hero;
     /**
      * Create a new component instance.
      */
     public function __construct()
     {
         //
-
-        $this->navLink = HeaderLink::where('is_active', true)->get() ?? null;
-        $this->headerSettings = HeaderSetting::first() ?? null;
+        $this->hero = Hero::where('page_key', 'destination')->first() ?? null;
     }
 
     /**
@@ -28,6 +24,6 @@ class HeaderMenu extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.header-menu');
+        return view('components.hero-destination');
     }
 }

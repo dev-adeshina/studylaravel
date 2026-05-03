@@ -16,7 +16,7 @@ class about extends Component
     public function __construct()
     {
         //
-        $this->hero = Hero::where('page_key', 'blog')->first();
+        $this->hero = Hero::where('page_key', 'about')->first() ?? null;
     }
 
     /**

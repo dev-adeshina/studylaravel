@@ -5,21 +5,23 @@
             <div class="w-full">
                 <div
                     class="hero-breadcrumb">
-                    {{ $hero->breadcrumb ?? 'About Uss'}}
-                    <!-- About Us -->
+                    {{ $hero->breadcrumb ?? 'About Us'}}
+                  
                 </div>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-12">
                 <div class="order-1 col-span-7">
                     <h1 class="hero-title">
-                        Guilding Your Path to Global Education
+                        {{ $hero->title ?? 'Guilding Your Path to Global Education' }}
+                        
                     </h1>
 
                 </div>
                 <div class="order-2 col-span-5">
 
                     <p class="hero-paragraph">
-                        StudyGlide is more than a consultancy; we are your strategic partner in navigating the complexities of international admissions.
+                        {{ $hero->description ?? 'StudyGlide is more than a consultancy; we are your strategic partner in navigating the complexities of international admissions.'}}
+                        
                     </p>
                 </div>
             </div>

@@ -1,5 +1,5 @@
 <x-layouts.subpage>
-    <x-subbanner.services />
+    <x-hero-service />
     <main>
         
         <div id="mission-statement" class="shell py-16 md:py-20 lg:py-18">

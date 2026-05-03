@@ -5,21 +5,20 @@
             <div class="w-full">
                 <div
                     class="hero-breadcrumb">
-                    {{ $hero->breadcrumb ?? 'About Uss'}}
-                    <!-- About Us -->
+                    {{ $hero->breadcrumb ?? 'FAQ' }}
                 </div>
             </div>
-            <div class="grid grid-cols-1 lg:grid-cols-12">
-                <div class="order-1 col-span-7">
+            <div class="grid grid-cols-1 lg:grid-cols-2">
+                <div class="order-1">
                     <h1 class="hero-title">
-                        Guilding Your Path to Global Education
+                        {{ $hero->title ?? 'What services does StudyGlide Educational Consult provide?' }}
                     </h1>
 
                 </div>
-                <div class="order-2 col-span-5">
+                <div class="order-2">
 
                     <p class="hero-paragraph">
-                        StudyGlide is more than a consultancy; we are your strategic partner in navigating the complexities of international admissions.
+                        {{ $hero->description ?? 'StudyGlide Educational Consult helps students achieve their dream of studying abroad. Our services include university selection, application processing, admission guidance, visa assistance, scholarship guidance, interview preparation, and pre-departure support.' }}
                     </p>
                 </div>
             </div>

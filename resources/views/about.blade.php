@@ -1,5 +1,5 @@
 <x-layouts.subpage>
-    <x-subbanner.about />
+    <x-hero-about />
     <main>
         <div class="shell">
             <section id="stats" class="py-16 md:py-20">

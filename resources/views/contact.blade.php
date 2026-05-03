@@ -1,5 +1,5 @@
 <x-layouts.subpage>
-    <x-subbanner.contact />
+    <x-hero-contact />
     <main class="shell lg:py-16">
         <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
 

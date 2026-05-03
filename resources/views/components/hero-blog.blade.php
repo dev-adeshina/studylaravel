@@ -5,21 +5,20 @@
             <div class="w-full">
                 <div
                     class="hero-breadcrumb">
-                    {{ $hero->breadcrumb ?? 'About Uss'}}
-                    <!-- About Us -->
+                    {{ $hero->breadcrumb ?? 'Blog' }}
                 </div>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-12">
                 <div class="order-1 col-span-7">
                     <h1 class="hero-title">
-                        Guilding Your Path to Global Education
+                        {{ $hero->title ?? 'Heading goes here'}}
                     </h1>
 
                 </div>
                 <div class="order-2 col-span-5">
 
                     <p class="hero-paragraph">
-                        StudyGlide is more than a consultancy; we are your strategic partner in navigating the complexities of international admissions.
+                        {{ $hero->description ?? 'Subscribe to learn about new product features, the latest in technology, solutions, and updates.' }}
                     </p>
                 </div>
             </div>

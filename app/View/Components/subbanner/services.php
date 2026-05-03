@@ -10,14 +10,14 @@ use App\Models\Hero;
 
 class services extends Component
 {
-    public string $hero;
+    public object $hero;
     /**
      * Create a new component instance.
      */
     public function __construct()
     {
         //
-        $this->hero = Hero::where('page_key', 'blog')->first();
+        $this->hero = Hero::where('page_key', 'services')->first() ?? null;
     }
 
     /**
