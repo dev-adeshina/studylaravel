@@ -1,5 +1,5 @@
 <x-layouts.subpage>
-     <x-subbanner.post />
+     <x-hero-post />
     <main>
        
         <div class="shell -mt-8 relative z-10">
