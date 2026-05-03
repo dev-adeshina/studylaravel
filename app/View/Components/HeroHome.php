@@ -16,7 +16,7 @@ class HeroHome extends Component
     public function __construct()
     {
         //
-         $this->hero = Hero::where('page_key', 'home')->first();
+         $this->hero = Hero::where('page_key', 'home')->first() ?? null;
     }
 
     /**
