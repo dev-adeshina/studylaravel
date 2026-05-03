@@ -1,5 +1,5 @@
 <x-layouts.subpage>
-     <x-subbanner.destination.post :destination="$destination" />
+     <x-hero-travels :destination="$destination" />
     <main>
         <div class="shell -mt-8 relative z-10">
             <img src="{{ asset('/images/destination/europe.png') }}" alt="Wireframing Hero" class="w-full h-[400px] md:h-[600px] object-cover rounded-2xl shadow-card">
