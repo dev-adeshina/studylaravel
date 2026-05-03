@@ -1,5 +1,7 @@
 <x-layouts.subpage>
-        <x-subbanner.applicant />
+    <section class="relative isolate bg-brand-800 text-white pb-4">
+        <x-header-menu/>
+    </section>
     <main>
        
         <article class="shell py-16 md:py-24">
