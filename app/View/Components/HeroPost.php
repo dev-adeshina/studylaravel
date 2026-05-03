@@ -5,15 +5,18 @@ namespace App\View\Components;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
+use App\Models\Hero;
 
 class HeroPost extends Component
 {
+    public Hero $hero;
     /**
      * Create a new component instance.
      */
     public function __construct()
     {
         //
+        $this->hero = Hero::where('page_key', 'post')->first() ?? null;
     }
 
     /**
