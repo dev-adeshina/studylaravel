@@ -27,13 +27,16 @@ class HeroForm
                 Textarea::make('description')
                     ->columnSpanFull(),
                 FileUpload::make('image_path')
+                    ->disk('public')
+                    ->directory('hero-images')
+                    ->visibility('public')
                     ->image(),
                 TextInput::make('primary_cta_text'),
-                TextInput::make('primary_cta_url')
-                    ->url(),
+                TextInput::make('primary_cta_url'),
+                    // ->url(),
                 TextInput::make('secondary_cta_text'),
-                TextInput::make('secondary_cta_url')
-                    ->url(),
+                TextInput::make('secondary_cta_url'),
+                    // ->url(),
                 Toggle::make('is_dynamic')
                     ->required(),
                 TextInput::make('author_name'),

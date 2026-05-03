@@ -1,23 +1,22 @@
 <?php
 
-namespace App\View\Components\layouts;
+namespace App\View\Components;
 
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
+use App\Models\Hero;
 
-
-class Home extends Component
+class HeroHome extends Component
 {
-    
+    public object $hero;
     /**
      * Create a new component instance.
      */
     public function __construct()
     {
         //
-        // $this->hero = Hero::where('page_key', 'home')->first();
-       
+         $this->hero = Hero::where('page_key', 'home')->first();
     }
 
     /**
@@ -25,6 +24,6 @@ class Home extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.layouts.home');
+        return view('components.hero-home');
     }
 }
