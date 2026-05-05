@@ -221,3 +221,36 @@ window.Swal = Swal;
         chatIcon.classList.toggle('hidden');
         closeIcon.classList.toggle('hidden');
     }
+
+    document.querySelectorAll('.accordion-item button').forEach(button => {
+          button.addEventListener('click', () => {
+          const content = button.nextElementSibling;
+          const minusIcon = button.querySelector('.minus-icon');
+          const plusIcon = button.querySelector('.plus-icon');
+
+            // Toggle content height
+            if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+                content.style.maxHeight = '0px';
+                minusIcon.classList.replace('opacity-100', 'opacity-0');
+                plusIcon.classList.replace('opacity-0', 'opacity-100');
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                minusIcon.classList.replace('opacity-0', 'opacity-100');
+                plusIcon.classList.replace('opacity-100', 'opacity-0');
+            }
+          });
+      });
+
+      const myWidget = window.cloudinary.createUploadWidget({
+          cloudName: "dhthtqqff", 
+          uploadPreset: "ml_default",
+          resourceType: "video",
+          // ... other settings
+      }, (error, result) => {
+          if (!error && result && result.event === "success") {
+              document.getElementById("video-url-input").value = result.info.secure_url;
+              document.getElementById("video-url-input").dispatchEvent(new Event("input"));
+          }
+      });
+
+myWidget.open();
