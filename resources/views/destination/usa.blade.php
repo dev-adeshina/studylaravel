@@ -1,6 +1,6 @@
 <x-layouts.subpage>
      <x-hero-travels :destination="$destination" />
-    <main>
+    <!-- <main>
         <div class="shell -mt-8 relative z-10">
             <img src="{{ asset('/images/destination/us.png') }}" alt="Wireframing Hero" class="w-full h-[400px] md:h-[600px] object-cover rounded-2xl shadow-card">
         </div>
@@ -66,5 +66,6 @@
                 </article>
             </div>
         </article>
-    </main>
+    </main> -->
+    <x-destination-feature-post :slug="$slug" />
 </x-layouts.subpage>
