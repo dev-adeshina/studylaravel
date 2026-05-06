@@ -20,20 +20,16 @@
             <p class="mt-6 max-w-lg sm:max-w-xl lg:max-w-2xl font-body text-lg sm:text-xl md:text-2xl font-normal leading-7 sm:leading-8 md:leading-relaxed tracking-normal text-white/80">
                 {{ $hero->description ?? ' ' }}
 
-                <!-- Expertsss guidance for Nigerian students ready to study in the UK, USA,
-                Canada, and beyond. We simplify the journey from application to
-                arrival so your next move feels certain. -->
-               
             </p>
 
             <div class="mt-8 sm:mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5 lg:gap-6">
 
                 <div class="flex flex-col sm:flex-row items-center gap-4 w-full max-w-2xl">
 
-                    <a href="{{ route($hero->primary_cta_url) }}" class="pixel-anchor group relative flex items-center h-11 justify-between w-full sm:w-1/2 px-1 overflow-hidden bg-[#E2C065] border border-white/20 rounded-lg no-underline transition-all duration-300 hover:border-white/40">
+                    <a href="{{ route($hero->primary_cta_url) }}" class="pixel-anchor group relative flex items-center h-11 justify-between w-full sm:w-1/2 px-1 overflow-hidden bg-[#E2C065] border border-white/20 rounded-lg no-underline transition-all duration-300 hover:border-white/40 hover:text-white">
                         <div id="pixel-grid" class="pixel-grid absolute inset-0 grid pointer-events-none"></div>
 
-                        <span class="relative z-10 anchor-text pl-3 text-sm font-bold transition-colors duration-500 group-hover:text-brand-900">
+                        <span class="relative z-10 anchor-text pl-3 text-sm font-bold transition-colors duration-500 group-hover:text-white">
                             {{ $hero->primary_cta_text ?? '' }}
                             <!-- Explore Destinations -->
                         </span>
@@ -67,10 +63,6 @@
 
 
         <div class="relative overflow-hidden shadow-card">
-            <!-- <img
-                src="images/hero-header-section.png"
-                alt="Smiling international student in a hallway"
-                class="h-80 sm:h-[450px] md:h-[500px] lg:h-[540px] w-full object-cover object-center" /> -->
             <img
                 src="https://res.cloudinary.com/{{ config('filesystems.disks.cloudinary.cloud_name') }}/image/upload/{{ $hero->image_path }}"
                 alt="Smiling international student in a hallway"
