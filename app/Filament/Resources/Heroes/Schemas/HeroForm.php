@@ -8,6 +8,9 @@ use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Schema;
 
+use Illuminate\Support\Str;
+use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
+
 class HeroForm
 {
     public static function configure(Schema $schema): Schema
@@ -27,10 +30,22 @@ class HeroForm
                 Textarea::make('description')
                     ->columnSpanFull(),
                 FileUpload::make('image_path')
-                    ->disk('public')
-                    ->directory('hero-images')
+                    ->disk('cloudinary')
+                    ->directory('home-destination-images')
+                    ->image()
+                    ->imageEditor()
+                    ->live()
+                    ->required()
                     ->visibility('public')
-                    ->image(),
+                    ->extraAttributes(['overwrite' => true])
+                    ->getUploadedFileNameForStorageUsing(function (TemporaryUploadedFile $file): string {
+                        return (string) Str::uuid(); 
+                    }),
+                // FileUpload::make('image_path')
+                //     ->disk('public')
+                //     ->directory('hero-images')
+                //     ->visibility('public')
+                //     ->image(),
                 TextInput::make('primary_cta_text'),
                 TextInput::make('primary_cta_url'),
                     // ->url(),

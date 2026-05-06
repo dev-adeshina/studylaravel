@@ -72,7 +72,7 @@
                 alt="Smiling international student in a hallway"
                 class="h-80 sm:h-[450px] md:h-[500px] lg:h-[540px] w-full object-cover object-center" /> -->
             <img
-                src="{{ Storage::url($hero->image_path) }}"
+                src="https://res.cloudinary.com/{{ config('filesystems.disks.cloudinary.cloud_name') }}/image/upload/{{ $hero->image_path }}"
                 alt="Smiling international student in a hallway"
                 class="h-80 sm:h-[450px] md:h-[500px] lg:h-[540px] w-full object-cover object-center" />
             <div class="absolute inset-0 bg-gradient-to-t from-brand-900 via-brand-900/10 to-transparent"></div>

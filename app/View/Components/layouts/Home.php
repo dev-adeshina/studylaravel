@@ -5,7 +5,7 @@ namespace App\View\Components\layouts;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
-
+use App\Models\Logo;
 
 class Home extends Component
 {
@@ -16,7 +16,7 @@ class Home extends Component
     public function __construct()
     {
         //
-        // $this->hero = Hero::where('page_key', 'home')->first();
+        
        
     }
 
