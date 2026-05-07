@@ -2,8 +2,6 @@ import Swal from 'sweetalert2';
 window.Swal = Swal;
 
 
-alert("I am working");
-
 document.addEventListener('DOMContentLoaded', () => {
     
     // --- 1. DYNAMIC VIDEO MODAL LOGIC ---
