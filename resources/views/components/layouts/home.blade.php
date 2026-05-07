@@ -76,41 +76,7 @@
 
 
 
-  <!-- Video Modal - FIRST -->
-  <div id="videoModal-first" class="fixed inset-0 z-[9999] hidden bg-black/90 flex items-center justify-center p-4 sm:p-8" role="dialog" aria-modal="true">
-    <button class="closeModalBtn fixed right-6 top-6 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-white/95 text-2xl text-slate-900" aria-label="Close video" title="Close">
-      <i class="fa-solid fa-xmark"></i>
-    </button>
 
-    <video id="modalVideo-first" class="w-full h-[75vh] sm:h-[80vh] max-h-[80vh] max-w-[95vw] sm:max-w-[90vw] md:max-w-4xl mx-auto rounded-3xl shadow-2xl object-contain ring-2 ring-white/20" controls preload="metadata" playsinline>
-      <source src="images/testimonial/first.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
-
-  <!-- Video Modal - FIRST -->
-  <div id="videoModal-second" class="fixed inset-0 z-[9999] hidden bg-black/90 flex items-center justify-center p-4 sm:p-8" role="dialog" aria-modal="true">
-    <button class="closeModalBtn fixed right-6 top-6 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-white/95 text-2xl text-slate-900" aria-label="Close video" title="Close">
-      <i class="fa-solid fa-xmark"></i>
-    </button>
-
-    <video id="modalVideo-second" class="w-full h-[75vh] sm:h-[80vh] max-h-[80vh] max-w-[95vw] sm:max-w-[90vw] md:max-w-4xl mx-auto rounded-3xl shadow-2xl object-contain ring-2 ring-white/20" controls preload="metadata" playsinline>
-      <source src="images/testimonial/second.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
-
-  <!-- Video Modal - FIRST -->
-  <div id="videoModal-third" class="fixed inset-0 z-[9999] hidden bg-black/90 flex items-center justify-center p-4 sm:p-8" role="dialog" aria-modal="true">
-    <button class="closeModalBtn fixed right-6 top-6 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-white/95 text-2xl text-slate-900" aria-label="Close video" title="Close">
-      <i class="fa-solid fa-xmark"></i>
-    </button>
-
-    <video id="modalVideo-third" class="w-full h-[75vh] sm:h-[80vh] max-h-[80vh] max-w-[95vw] sm:max-w-[90vw] md:max-w-4xl mx-auto rounded-3xl shadow-2xl object-contain ring-2 ring-white/20" controls preload="metadata" playsinline>
-      <source src="images/testimonial/third.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
 
 
   <x-whatsapp-channel />
