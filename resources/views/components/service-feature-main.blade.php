@@ -1,4 +1,4 @@
-<section id="service-stories" class="py-16 md:py-20">
+<section id="service-stories" class="my-2">
     <div class="flex flex-col gap-y-20">
 
          @foreach($mainFeatures as $main) 
