@@ -42,29 +42,18 @@
 
 
             <h2 class="font-inter font-semibold text-[24px] leading-[32px] mb-[24px] text-[#181D27] tracking-[0%]">List of Schools in the United States</h2>
-            <article class="pl-3 py-2 font-inter font-normal text-[#535862] text-[16px] lg:text-[18px] leading-[24px] lg:leading-[28px] mb-[16px] lg:mb-[18px]">
-                <!-- <ul class="list-disc list-outside ml-6 space-y-2 font-inter font-normal text-[#535862] text-[16px] lg:text-[18px] leading-[24px] lg:leading-[28px] mb-[16px] lg:mb-[18px]"> -->
+                <article class="
+                    prose max-w-none pl-3 py-2  
+                    font-normal text-[#535862] 
+                    [&_ul]:list-disc [&_ul]:ml-6 
+                    [&_li]:list-item pl-3 py-2 
+                    font-inter  [&_ul]:space-y-2 
+                    [&_li]:text-[16px] lg:[&_li]:text-[18px] 
+                    [&_li]:leading-[24px] lg:[&_li]:leading-[28px]
+                    pl-3 py-2 font-inter  mb-[16px] lg:mb-[18px]">
+                
                     {!! $slugs->schools_list !!}
-                <!-- </ul> -->
-                <!-- <ul class="list-disc list-outside ml-6 space-y-2">
-
-                    <li class="font-inter font-normal text-[#535862] text-[16px] lg:text-[18px] leading-[24px] lg:leading-[28px] mb-[16px] lg:mb-[18px]">Arizona State University</li>
-                    <li class="font-inter font-normal text-[#535862] text-[16px] lg:text-[18px] leading-[24px] lg:leading-[28px] mb-[16px] lg:mb-[18px]">Queens College</li>
-                    <li class="font-inter font-normal text-[#535862] text-[16px] lg:text-[18px] leading-[24px] lg:leading-[28px] mb-[16px] lg:mb-[18px]">Virginia Commonwealth University</li>
-                    <li class="font-inter font-normal text-[#535862] text-[16px] lg:text-[18px] leading-[24px] lg:leading-[28px] mb-[16px] lg:mb-[18px]">University of Massachuseets (Lowell)</li>
-                    <li class="font-inter font-normal text-[#535862] text-[16px] lg:text-[18px] leading-[24px] lg:leading-[28px] mb-[16px] lg:mb-[18px]">University of Massachuseets (Dartmouth)</li>
-                    <li class="font-inter font-normal text-[#535862] text-[16px] lg:text-[18px] leading-[24px] lg:leading-[28px] mb-[16px] lg:mb-[18px]">University of Massachuseets (Boston)</li>
-                    <li class="font-inter font-normal text-[#535862] text-[16px] lg:text-[18px] leading-[24px] lg:leading-[28px] mb-[16px] lg:mb-[18px]">Florida Atlantic University</li>
-                    <li class="font-inter font-normal text-[#535862] text-[16px] lg:text-[18px] leading-[24px] lg:leading-[28px] mb-[16px] lg:mb-[18px]">Thomas Jefferson University</li>
-                    <li class="font-inter font-normal text-[#535862] text-[16px] lg:text-[18px] leading-[24px] lg:leading-[28px] mb-[16px] lg:mb-[18px]">Quinnipiac University</li>
-                    <li class="font-inter font-normal text-[#535862] text-[16px] lg:text-[18px] leading-[24px] lg:leading-[28px] mb-[16px] lg:mb-[18px]">University of Arizona</li>
-                    <li class="font-inter font-normal text-[#535862] text-[16px] lg:text-[18px] leading-[24px] lg:leading-[28px] mb-[16px] lg:mb-[18px]">University of Alabama, Birmingham</li>
-                    <li class="font-inter font-normal text-[#535862] text-[16px] lg:text-[18px] leading-[24px] lg:leading-[28px] mb-[16px] lg:mb-[18px]">University of South Florida</li>
-                    <li class="font-inter font-normal text-[#535862] text-[16px] lg:text-[18px] leading-[24px] lg:leading-[28px] mb-[16px] lg:mb-[18px]">Colorado State University</li>
-                    <li class="font-inter font-normal text-[#535862] text-[16px] lg:text-[18px] leading-[24px] lg:leading-[28px] mb-[16px] lg:mb-[18px]">George Mason University</li>
-                    <li class="font-inter font-normal text-[#535862] text-[16px] lg:text-[18px] leading-[24px] lg:leading-[28px] mb-[16px] lg:mb-[18px]">Hofstra University</li>
-                    <li class="font-inter font-normal text-[#535862] text-[16px] lg:text-[18px] leading-[24px] lg:leading-[28px] mb-[16px] lg:mb-[18px]">Saint Louis University</li>
-                </ul> -->
+               
             </article>
         </div>
     </article>
