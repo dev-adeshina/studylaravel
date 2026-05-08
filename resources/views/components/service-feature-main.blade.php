@@ -5,8 +5,8 @@
         <div class="group flex flex-col lg:flex-row lg:even:flex-row-reverse items-center">
             <div class="w-full lg:w-1/2 order-2 lg:order-none 
                                 px-4 py-8
-                                lg:pl-[240px] lg:pr-[100px] 
-                                lg:group-even:pl-[240px] lg:group-even:pr-[100px]">
+                                lg:pl-[340px] lg:pr-[100px] 
+                                lg:group-even:pl-[100px] lg:group-even:pr-[340px]">
 
                 <h1 class="service-title">{{ $main->title }}</h1>
                 <p class="service-paragraph">
@@ -27,8 +27,10 @@
                 </a>
             </div>
 
-            <div class="w-full lg:w-1/2 order-1 lg:order-none">
+            <div class="relative w-full lg:w-1/2 order-1 lg:order-none">
                 <img src="https://res.cloudinary.com/{{ config('filesystems.disks.cloudinary.cloud_name') }}/image/upload/{{ $main->image_path }}" class="w-full h-auto object-cover">
+                <!-- Overlay Shadow -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
             </div>
 
         </div>
